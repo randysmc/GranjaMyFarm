@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package plantas;
+package interfaces;
 
 /**
  *
  * @author randysmc
  */
-public enum EstadoPlanta {
+public interface Omnivoro {
     
 }

@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package plantas;
+package manejadores;
+
+import animales.Animal;
 
 /**
  *
  * @author randysmc
  */
-public interface Fruta {
+public class Bodega {
+    Animal animal;
     
 }

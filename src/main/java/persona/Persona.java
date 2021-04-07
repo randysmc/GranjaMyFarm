@@ -1,6 +1,10 @@
 
 package persona;
 
+import animales.Animal;
+import plantas.Planta;
+import vehiculos.Barco;
+
 
 public class Persona {
     
@@ -10,6 +14,97 @@ public class Persona {
     private int oro;
     private int oroGenerado;
     private int oroAcumulado;
+    private Animal[] animales;
+    private Planta[] plantas;
+    private Barco barco1;
+
+    public Persona(String nombre, String nickName, int vida, int oro, int oroGenerado, int oroAcumulado, Animal[] animales, Planta[] plantas, Barco barco1) {
+        this.nombre = nombre;
+        this.nickName = nickName;
+        this.vida = vida;
+        this.oro = oro;
+        this.oroGenerado = oroGenerado;
+        this.oroAcumulado = oroAcumulado;
+        this.animales = animales;
+        this.plantas = plantas;
+        this.barco1 = barco1;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+    public int getVida() {
+        return vida;
+    }
+
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
+    public int getOro() {
+        return oro;
+    }
+
+    public void setOro(int oro) {
+        this.oro = oro;
+    }
+
+    public int getOroGenerado() {
+        return oroGenerado;
+    }
+
+    public void setOroGenerado(int oroGenerado) {
+        this.oroGenerado = oroGenerado;
+    }
+
+    public int getOroAcumulado() {
+        return oroAcumulado;
+    }
+
+    public void setOroAcumulado(int oroAcumulado) {
+        this.oroAcumulado = oroAcumulado;
+    }
+
+    public Animal[] getAnimales() {
+        return animales;
+    }
+
+    public void setAnimales(Animal[] animales) {
+        this.animales = animales;
+    }
+
+    public Planta[] getPlantas() {
+        return plantas;
+    }
+
+    public void setPlantas(Planta[] plantas) {
+        this.plantas = plantas;
+    }
+
+    public Barco getBarco1() {
+        return barco1;
+    }
+
+    public void setBarco1(Barco barco1) {
+        this.barco1 = barco1;
+    }
+    
+    
+    
+    
     
     
     

@@ -3,20 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package terreno;
-
-import enums.EstadoSueloGranja;
+package interfaces;
 
 /**
  *
  * @author randysmc
  */
-public class Grama extends Casilla{
+public interface Carnivoro {
     
-    public Grama(int precio) {
-        super(40, precio, EstadoSueloGranja.SEMBRAR);
-    }
-    
-    
+    public void comer();
     
 }

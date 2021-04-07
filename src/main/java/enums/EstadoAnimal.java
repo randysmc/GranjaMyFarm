@@ -3,20 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package terreno;
-
-import enums.EstadoSueloGranja;
+package enums;
 
 /**
  *
  * @author randysmc
  */
-public class Grama extends Casilla{
-    
-    public Grama(int precio) {
-        super(40, precio, EstadoSueloGranja.SEMBRAR);
-    }
-    
-    
+public enum EstadoAnimal {
+    CRIA, JOVEN, ADULTO, MUERTO
     
 }

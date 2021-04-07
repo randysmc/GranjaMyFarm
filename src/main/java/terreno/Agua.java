@@ -5,11 +5,26 @@
  */
 package terreno;
 
+import enums.EstadoSueloGranja;
+
 /**
  *
  * @author randysmc
  */
 public class Agua extends Casilla {
+
+    public Agua(int precio) {
+        super(35, precio, EstadoSueloGranja.PESCAR);
+        
+    }
+
+    public Agua() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
+    
+    
     
     
 }

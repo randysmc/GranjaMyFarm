@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package animales;
+package enums;
 
 /**
  *
  * @author randysmc
  */
-public enum EstadoAnimal {
+public enum EstadoSueloGranja {
+    SEMBRAR, PESCAR, INHABILITABLE
     
 }

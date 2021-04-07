@@ -5,10 +5,16 @@
  */
 package terreno;
 
+import enums.EstadoSueloGranja;
+
 /**
  *
  * @author randysmc
  */
 public class Desierto extends Casilla {
+    
+    public Desierto(int precio) {
+        super(25, precio, EstadoSueloGranja.INHABILITABLE);
+    }
     
 }

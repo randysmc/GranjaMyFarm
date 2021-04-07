@@ -5,16 +5,32 @@
  */
 package plantas;
 
+import enums.EstadoCosecha;
+
 /**
  *
  * @author randysmc
  */
-public class Planta {
-    private int precio;
-    private int tiempoDeVida;
-    private int cantidadSemillas;
-    private int tiempoMaduracion;
-    private int tiempoDeSecado;
+public abstract class Planta {
+    protected int precio;
+    protected int tiempoDeVida;
+    protected int cantidadSemillas;
+    protected int tiempoMaduracion;
+    protected int tiempoDeSecado;
+    protected EstadoCosecha estado;
+    private static int instanciasPlanta;
+
+    public Planta(int precio, int tiempoDeVida, int cantidadSemillas, int tiempoMaduracion, int tiempoDeSecado, EstadoCosecha estado) {
+        this.precio = precio;
+        this.tiempoDeVida = tiempoDeVida;
+        this.cantidadSemillas = cantidadSemillas;
+        this.tiempoMaduracion = tiempoMaduracion;
+        this.tiempoDeSecado = tiempoDeSecado;
+        this.estado = estado;
+        instanciasPlanta++;
+    }
+    
+    
     
     
 }

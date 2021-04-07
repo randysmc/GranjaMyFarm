@@ -5,14 +5,26 @@
  */
 package terreno;
 
+import enums.EstadoSueloGranja;
+
 /**
  *
  * @author randysmc
  */
-public class Casilla {
+public abstract class Casilla {
     
-    private int probabilidadAparicion;
-    private int precio;
+    protected int probabilidadAparicion;
+    protected int precio;
+    protected EstadoSueloGranja estadoSuelo;
+
+    public Casilla(int probabilidadAparicion, int precio, EstadoSueloGranja estadoSuelo) {
+        this.probabilidadAparicion = probabilidadAparicion;
+        this.precio = precio;
+        this.estadoSuelo = estadoSuelo;
+    }
+    
+    
+    
     
     
     
