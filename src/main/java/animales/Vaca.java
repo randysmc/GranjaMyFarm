@@ -5,8 +5,9 @@
  */
 package animales;
 
-import enums.EstadoAnimal;
-import interfaces.Herviboro;
+import enums.*;
+import interfaces.*;
+import productos.*;
 
 /**
  *
@@ -15,6 +16,8 @@ import interfaces.Herviboro;
 public class Vaca extends Animal implements Herviboro{
     
     private static int instanciasVaca;
+    private Carne[] carneVaca; //no se si tomarlo como un arreglo o como un objeto
+    private Leche[] lecheVaca;
     
 
     public Vaca() {

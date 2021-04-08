@@ -23,8 +23,11 @@ public class Principal {
     
     
     public static void main(String[] args) {
-        Mercado mercado1 = new Mercado();
-        mercado1.mostrarAnimalesVenta();
+        //Mercado mercado1 = new Mercado();
+        //mercado1.iniciarVenta();
+        Granja granja = new Granja();
+        granja.mostrarGranja();
+
 
         
        

@@ -13,6 +13,7 @@ import enums.EstadoCosecha;
  */
 public class Maiz extends Planta{
     
+    
     private static int instanciasMaiz;
     
     public Maiz(int precio, int tiempoDeVida, int cantidadSemillas, int tiempoMaduracion, int tiempoDeSecado, EstadoCosecha estado) {

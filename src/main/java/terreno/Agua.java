@@ -13,14 +13,46 @@ import enums.EstadoSueloGranja;
  */
 public class Agua extends Casilla {
 
-    public Agua(int precio) {
-        super(35, precio, EstadoSueloGranja.PESCAR);
+    public Agua() {
+        super(35, 30,'a', EstadoSueloGranja.PESCAR);
         
     }
 
-    public Agua() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public char getSimbol() {
+        return simbol;
     }
+
+    public void setSimbol(char simbol) {
+        this.simbol = simbol;
+    }
+    
+    
+
+    public int getProbabilidadAparicion() {
+        return probabilidadAparicion;
+    }
+
+    public void setProbabilidadAparicion(int probabilidadAparicion) {
+        this.probabilidadAparicion = probabilidadAparicion;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public EstadoSueloGranja getEstadoSuelo() {
+        return estadoSuelo;
+    }
+
+    public void setEstadoSuelo(EstadoSueloGranja estadoSuelo) {
+        this.estadoSuelo = estadoSuelo;
+    }
+
+
     
     
     

@@ -3,11 +3,14 @@ package animales;
 
 import enums.EstadoAnimal;
 import interfaces.Omnivoro;
+import productos.*;
 
 
 public class Gallina extends Animal implements Omnivoro{
     
     private static int instanciasGallina;
+    private Huevos[] huevos;
+    private Carne[] carneGallina;
 
     public Gallina() {
         super("Gallina", 15, 5000, "kiki",1.5, EstadoAnimal.CRIA);
