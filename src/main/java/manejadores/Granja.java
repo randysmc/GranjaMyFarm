@@ -1,26 +1,65 @@
 package manejadores;
 
 import animales.*;
+import enums.EstadoAnimal;
 import java.util.Random;
-import persona.Persona;
+import javax.swing.JButton;
+import persona.Jugador;
 import terreno.*;
+import ventana.*;
+import manejadores.*;
 //import terreno.Casilla;
+import persona.*;
 
 public class Granja {
 
     Random random = new Random();
+    Principal principal;
+    Terreno[][] terreno;
+    //Jugador jugador;
 
-    Persona granjero;
+    public Granja(int cantidadX, int cantidadY) {
+        this.terreno = CreadorTerreno.crearTerreno(cantidadX, cantidadY);
+
+    }
+
+    public Granja() {
+    }
+    
+    
+
+    Animal gallina = new Gallina();
+    Animal vaca = new Vaca();
+    
+    
+    
+    ManejadorAnimales vidaGallina = new ManejadorAnimales(gallina);
+    ManejadorAnimales vidaVaca = new ManejadorAnimales(vaca);
+    
+    Thread vida1 = new Thread(vidaGallina);
+    Thread vida2 = new Thread(vidaVaca);
+    
+    public void iniciarVidaAnimales(){
+        vida1.start();
+        vida2.start();
+    }
+    
+    
+    
+    
+    
+    
+
+
+    /*Jugador granjero;
     Animal[] animalesGranjero;
-    int x = 5;
-    int y = 5;
-    Casilla[][] terreno = new Casilla[x][y];
-    //Casilla casilla;
-    Agua agua;
-    Grama grama;
-    Desierto desierto;
+    Terreno terreno;
+    JButton boton;
 
-    public void crearGranja() {
+    Principal principal;*/
+
+ /* public void crearGranja() {
+        Terreno [][] terreno = new Terreno[5][5];
         int random;
         for (int i = 0; i < terreno.length; i++) {
             for (int j = 0; j < terreno.length; j++) {
@@ -34,19 +73,6 @@ public class Granja {
                     terreno[i][j] = new Desierto();
                 }
 
-                /* switch (random) {
-                    case 0:
-                        terreno[i][j] = new Grama();
-                        break;
-                    case 1:
-                        terreno[i][j] = new Agua();
-                        break;
-                    case 2:
-                        terreno[i][j] = new Desierto();
-                        break;
-                    default:
-                        terreno[i][j] = new Grama();
-                        break;*/
             }
         }
     }
@@ -58,8 +84,8 @@ public class Granja {
         String linea1 = "";
         String linea2 = "";
         String linea3 = "";
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
+        for (int i = 0; i <terreno.length; i++) {
+            for (int j = 0; j < terreno.length; j++) {
                 linea1 += terreno[i][j].getSimbol();
                 linea2 += terreno[i][j].getSimbol();
                 linea3 += terreno[i][j].getSimbol();
@@ -74,11 +100,18 @@ public class Granja {
 
         }
 
+    }*/
+    public Terreno[][] getTerreno() {
+        return terreno;
     }
+
+    public void setTerreno(Terreno[][] terreno) {
+        this.terreno = terreno;
+    }
+
 }
 
-    /* if (j==7)
+/* if (j==7)
                     linea2+="  "+i;
                 if (i==7)
                     linea4+="   "+j+"  ";*/
-

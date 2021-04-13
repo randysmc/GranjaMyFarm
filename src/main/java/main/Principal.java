@@ -10,6 +10,9 @@ import animales.*;
 import enums.*;
 import manejadores.*;
 import plantas.*;
+import ventana.*;
+import manejadores.*;
+import persona.*;
 
 
 /**
@@ -23,14 +26,24 @@ public class Principal {
     
     
     public static void main(String[] args) {
-        //Mercado mercado1 = new Mercado();
-        //mercado1.iniciarVenta();
-        Granja granja = new Granja();
-        granja.mostrarGranja();
-
-
         
+        /*Granja granja = new Granja();
+        granja.iniciarVidaAnimales();*/
+        
+        Inicio inicio = new Inicio();
+        inicio.setVisible(true);
+        inicio.setLocationRelativeTo(null);
+        inicio.setName("Granja, My Farm");
+        
+        /*Jugador jugador = new Jugador("jose", "chepe", 50, 0);
+        jugador.IniciarVidaGranjero();*/
        
+
+       
+       
+       
+       
+          
         
     }
     

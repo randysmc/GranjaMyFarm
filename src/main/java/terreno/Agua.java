@@ -11,12 +11,18 @@ import enums.EstadoSueloGranja;
  *
  * @author randysmc
  */
-public class Agua extends Casilla {
+public class Agua extends Terreno {
 
     public Agua() {
-        super(35, 30,'a', EstadoSueloGranja.PESCAR);
+        super(35, 30, EstadoSueloGranja.PESCAR, 'a');
         
     }
+
+    public Agua(int ladoX, int ladoY) {
+        super(ladoX, ladoY);
+    }
+    
+    
 
     public char getSimbol() {
         return simbol;

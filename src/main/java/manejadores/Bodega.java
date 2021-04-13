@@ -12,6 +12,6 @@ import animales.Animal;
  * @author randysmc
  */
 public class Bodega {
-    Animal animal;
+    Animal animalesGranjero;
     
 }

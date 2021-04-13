@@ -11,11 +11,17 @@ import enums.EstadoSueloGranja;
  *
  * @author randysmc
  */
-public class Desierto extends Casilla {
+public class Desierto extends Terreno {
     
     public Desierto() {
-        super(25, 20,'d', EstadoSueloGranja.INHABILITABLE);
+        super(25, 20, EstadoSueloGranja.INHABILITABLE, 'd');
     }
+
+    public Desierto(int ladoX, int ladoY) {
+        super(ladoX, ladoY);
+    }
+    
+    
 
     public char getSimbol() {
         return simbol;

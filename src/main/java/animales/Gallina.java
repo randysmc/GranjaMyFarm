@@ -12,12 +12,18 @@ public class Gallina extends Animal implements Omnivoro{
     private Huevos[] huevos;
     private Carne[] carneGallina;
 
-    public Gallina() {
-        super("Gallina", 15, 5000, "kiki",1.5, EstadoAnimal.CRIA);
+    public Gallina(Huevos[] huevos, Carne[] carneGallina ) {
+        super("Galllina", 50, 5000,5000,5000,150000, "kiki", 1.5, EstadoAnimal.CRIA);
+        this.huevos = huevos;
+        this.carneGallina = carneGallina;
         Gallina.instanciasGallina++;
     }
 
- 
+    public Gallina() {
+        super("nombre", 15, (5*1000), (10*1000), (15*1000), (30*1000), "kiki",1.5, enums.EstadoAnimal.CRIA);
+        Gallina.instanciasGallina++;
+    }
+    
 
     public static int getInstanciasGallina() {
         return instanciasGallina;
@@ -25,6 +31,22 @@ public class Gallina extends Animal implements Omnivoro{
 
     public static void setInstanciasGallina(int instanciasGallina) {
         Gallina.instanciasGallina = instanciasGallina;
+    }
+
+    public Huevos[] getHuevos() {
+        return huevos;
+    }
+
+    public void setHuevos(Huevos[] huevos) {
+        this.huevos = huevos;
+    }
+
+    public Carne[] getCarneGallina() {
+        return carneGallina;
+    }
+
+    public void setCarneGallina(Carne[] carneGallina) {
+        this.carneGallina = carneGallina;
     }
 
     public String getNombre() {
@@ -43,12 +65,12 @@ public class Gallina extends Animal implements Omnivoro{
         this.precio = precio;
     }
 
-    public int getTiempoVida() {
-        return tiempoVida;
+    public int getTiempoVidaCria() {
+        return tiempoVidaCria;
     }
 
-    public void setTiempoVida(int tiempoVida) {
-        this.tiempoVida = tiempoVida;
+    public void setTiempoVidaCria(int tiempoVida) {
+        this.tiempoVidaCria = tiempoVida;
     }
 
     public String getIcono() {
@@ -74,6 +96,26 @@ public class Gallina extends Animal implements Omnivoro{
     public void setEstado(EstadoAnimal estado) {
         this.estado = estado;
     }
+
+    public int getTiempoVidaJoven() {
+        return tiempoVidaJoven;
+    }
+
+    public void setTiempoVidaJoven(int tiempoVidaJoven) {
+        this.tiempoVidaJoven = tiempoVidaJoven;
+    }
+
+    public int getTiempoVidaAdulto() {
+        return tiempoVidaAdulto;
+    }
+
+    public void setTiempoVidaAdulto(int TiempoVidaAdulto) {
+        this.tiempoVidaAdulto = tiempoVidaAdulto;
+    }
+    
+    
+
+
     
     
     
@@ -91,6 +133,16 @@ public void comer(){
         System.out.println("Estoy bien pinche muertoALV limpia");
     }
 }
+
+    @Override
+    public void generarProductos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void comiendoComoOmnivoro() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 
 

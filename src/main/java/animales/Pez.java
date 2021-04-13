@@ -11,4 +11,8 @@ package animales;
  */
 public class Pez {
     
+    private int precio;
+    private int cantidadEnergia;
+    
+    
 }

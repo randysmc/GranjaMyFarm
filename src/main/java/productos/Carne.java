@@ -10,5 +10,10 @@ package productos;
  * @author randysmc
  */
 public class Carne {
+    private String nombre ="";
+    private int precioVenta =0;
+    private int nutrientes =0;
+    
+    
     
 }

@@ -11,6 +11,6 @@ package interfaces;
  */
 public interface Herviboro {
     
-    public void comer();
+    public void comerComoHerviboro();
     
 }

@@ -11,11 +11,18 @@ import enums.EstadoSueloGranja;
  *
  * @author randysmc
  */
-public class Grama extends Casilla{
-    
+public class Grama extends Terreno{
+
     public Grama() {
-        super(40, 15,'g', EstadoSueloGranja.SEMBRAR);
+        super(40, 100, EstadoSueloGranja.SEMBRAR, 'g');
     }
+
+    public Grama(int ladoX, int ladoY) {
+        super(ladoX, ladoY);
+    }
+    
+ 
+ 
 
     public char getSimbol() {
         return simbol;

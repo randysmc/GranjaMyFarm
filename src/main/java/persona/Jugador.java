@@ -2,11 +2,13 @@
 package persona;
 
 import animales.Animal;
+import static java.lang.Thread.sleep;
+import manejadores.ManejadorGranjero;
 import plantas.Planta;
 import vehiculos.Barco;
 
 
-public class Persona {
+public class Jugador {
     
     private String nombre;
     private String nickName;
@@ -17,8 +19,9 @@ public class Persona {
     private Animal[] animales;
     private Planta[] plantas;
     private Barco barco1;
+    ManejadorGranjero manejadorGranjero;
 
-    public Persona(String nombre, String nickName, int vida, int oro, int oroGenerado, int oroAcumulado, Animal[] animales, Planta[] plantas, Barco barco1) {
+    public Jugador(String nombre, String nickName, int vida, int oro, int oroGenerado, int oroAcumulado, Animal[] animales, Planta[] plantas, Barco barco1) {
         this.nombre = nombre;
         this.nickName = nickName;
         this.vida = vida;
@@ -29,6 +32,15 @@ public class Persona {
         this.plantas = plantas;
         this.barco1 = barco1;
     }
+    
+    public Jugador(String nombre, String nickName, int vida, int oro){
+        this.nombre = nombre;
+        this.nickName = nickName;
+        this.vida = vida;
+        this.oro = oro;
+    }
+    
+    
 
     public String getNombre() {
         return nombre;
@@ -46,8 +58,10 @@ public class Persona {
         this.nickName = nickName;
     }
 
-    public int getVida() {
+    public int getVida()  {
+
         return vida;
+        
     }
 
     public void setVida(int vida) {

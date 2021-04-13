@@ -11,4 +11,6 @@ package interfaces;
  */
 public interface Omnivoro {
     
+    public void comiendoComoOmnivoro();
+    
 }

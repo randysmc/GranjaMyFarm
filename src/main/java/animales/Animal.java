@@ -12,32 +12,67 @@ public abstract class Animal {
     //static int instanciasGallina;
     protected String nombre;
     protected int precio;
-    protected int tiempoVida;
+    protected int tiempoVidaCria, tiempoVidaJoven, tiempoVidaAdulto;
     protected String icono;
     protected double espacioParcela;
     protected EstadoAnimal estado;
+    protected int tiempoVidaT = (tiempoVidaCria+tiempoVidaJoven+tiempoVidaAdulto);
     
     private static int instanciasAnimales;
 
-    public Animal(String nombre, int precio, int tiempoVida, String icono, double espacioParcela, EstadoAnimal estado) {
+    public Animal(String nombre, int precio, int tiempoVidaCria, 
+            int tiempoVidaJoven, int tiempoVidaAdulto,int tiempVidaT, String icono, double espacioParcela, EstadoAnimal estado) {
         this.nombre = nombre;
         this.precio = precio;
-        this.tiempoVida = tiempoVida;
+        this.tiempoVidaCria = tiempoVidaCria;
+        this.tiempoVidaJoven = tiempoVidaJoven;
+        this.tiempoVidaCria = tiempoVidaAdulto;
+        this.tiempoVidaT = tiempoVidaT;
         this.icono = icono;
         this.espacioParcela = espacioParcela;
         this.estado = estado;
         instanciasAnimales ++;
     }
+
+    public int getTiempoVidaT() {
+        return tiempoVidaT;
+    }
+
+    public void setTiempoVidaT(int tiempoVidaT) {
+        this.tiempoVidaT = tiempoVidaT;
+    }
     
     
     
 
+    public int getTiempoVidaCria() {
+        return tiempoVidaCria;
+    }
+
+    public void setTiempoVidaCria(int tiempoVidaCria) {
+        this.tiempoVidaCria = tiempoVidaCria;
+    }
+
+    public int getTiempoVidaJoven() {
+        return tiempoVidaJoven;
+    }
+
+    public void setTiempoVidaJoven(int tiempoVidaJoven) {
+        this.tiempoVidaJoven = tiempoVidaJoven;
+    }
+
+    public int getTiempoVidaAdulto() {
+        return tiempoVidaAdulto;
+    }
+
+    public void setTiempoVidaAdulto(int TiempoVidaAdulto) {
+        this.tiempoVidaAdulto = tiempoVidaAdulto;
+    }
     
-   
-    //public abstract void tiempoDeVida();
-    //public abstract void comer();
-    //public abstract void vivir();
-    //public abstract void existir();
+    
+    
+    public abstract void generarProductos();
+
 
     public String getNombre() {
         return nombre;
@@ -55,13 +90,7 @@ public abstract class Animal {
         this.precio = precio;
     }
 
-    public int getTiempoVida() {
-        return tiempoVida;
-    }
 
-    public void setTiempoVida(int tiempoVida) {
-        this.tiempoVida = tiempoVida;
-    }
 
     public String getIcono() {
         return icono;
